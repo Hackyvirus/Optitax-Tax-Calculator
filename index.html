@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h2 class="printable">Capital goods</h2>
+  <table id="printable" class="printable">
+    <thead>
+      <tr>
+        <td>BCD</td>
+        <td>2.5%</td>
+        <td>5.0%</td>
+        <td>7.5%</td>
+        <td>10.0%</td>
+        <td>15.0%</td>
+        <td>20.0%</td>
+        <td>25.0%</td>
+        <td>Total</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tooltip">Assessable value<span class="tooltiptext">Assessable Value</span></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-1" onchange="calculateTotal(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-1" onchange="calculateTotal(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-1" onchange="calculateTotal(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-1" onchange="calculateTotal(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-1" onchange="calculateTotal(1)" /></td>
+        <td><input type="number" min="o" autocomplete="off" class="input-1" onchange="calculateTotal(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-1" onchange="calculateTotal(1)" /></td>
+        <td id="total">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">BCD amount<span class="tooltiptext">bcd amount</span></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-2" readonly /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-2" readonly /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-2" readonly /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-2" readonly /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-2" readonly /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-2" readonly /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-2" readonly /></td>
+        <td id="total2">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">SWS<span class="tooltiptext">SWS</span></td>
+        <td><input type="number" min="0" class="input-3" autocomplete="off" readonly /></td autocomplete="off">
+        <td><input type="number" min="0" class="input-3" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-3" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-3" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-3" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-3" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-3" autocomplete="off" readonly /></td>
+        <td id="total3">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">AIDC Rate<span class="tooltiptext">AIDC Rate</span></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-4" onchange="aidcCalculator(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-4" onchange="aidcCalculator(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-4" onchange="aidcCalculator(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-4" onchange="aidcCalculator(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-4" onchange="aidcCalculator(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-4" onchange="aidcCalculator(1)" /></td>
+        <td><input type="number" min="0" autocomplete="off" class="input-4" onchange="aidcCalculator(1)" /></td>
+        <td id="total4">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">AIDC amount<span class="tooltiptext">AIDC Amount</span></td>
+        <td><input type="number" min="0" class="input-5" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-5" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-5" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-5" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-5" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-5" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-5" autocomplete="off" readonly /></td>
+        <td id="total5">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">ADD Rate<span class="tooltiptext">ADD Rate</span></td>
+        <td><input type="number" min="0" class="input-6" autocomplete="off" onchange="addCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-6" autocomplete="off" onchange="addCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-6" autocomplete="off" onchange="addCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-6" autocomplete="off" onchange="addCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-6" autocomplete="off" onchange="addCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-6" autocomplete="off" onchange="addCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-6" autocomplete="off" onchange="addCalculator(1)" /></td>
+        <td id="total6">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">ADD amount<span class="tooltiptext">ADD Amount</span></td>
+        <td><input type="number" min="0" class="input-7" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-7" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-7" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-7" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-7" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-7" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-7" autocomplete="off" readonly /></td>
+        <td id="total7">0</td>
+      </tr>
+
+      <tr>
+        <td class="tooltip">IGST Rate<span class="tooltiptext">IGST Rate</span></td>
+        <td><input type="number" min="0" class="input-8" autocomplete="off" onchange="igstCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-8" autocomplete="off" onchange="igstCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-8" autocomplete="off" onchange="igstCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-8" autocomplete="off" onchange="igstCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-8" autocomplete="off" onchange="igstCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-8" autocomplete="off" onchange="igstCalculator(1)" /></td>
+        <td><input type="number" min="0" class="input-8" autocomplete="off" onchange="igstCalculator(1)" /></td>
+        <td id="total8">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">IGST amount<span class="tooltiptext">IGST Amount</span></td>
+        <td><input type="number" min="0" class="input-9" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-9" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-9" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-9" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-9" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-9" autocomplete="off" readonly /></td>
+        <td><input type="number" min="0" class="input-9" autocomplete="off" readonly /></td>
+        <td id="total9">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">Intended period of use (in years)<span class="tooltiptext">Intended period</span></td>
+        <td><input type="number" min="0" class="input-10" autocomplete="off" onchange="intendedPeriodCalcuator()" />
+        </td>
+        <td><input type="number" min="0" class="input-10" autocomplete="off" onchange="intendedPeriodCalcuator()" />
+        </td>
+        <td><input type="number" min="0" class="input-10" autocomplete="off" onchange="intendedPeriodCalcuator()" />
+        </td>
+        <td><input type="number" min="0" class="input-10" autocomplete="off" onchange="intendedPeriodCalcuator()" />
+        </td>
+        <td><input type="number" min="0" class="input-10" autocomplete="off" onchange="intendedPeriodCalcuator()" />
+        </td>
+        <td><input type="number" min="0" class="input-10" autocomplete="off" onchange="intendedPeriodCalcuator()" />
+        </td>
+        <td><input type="number" min="0" class="input-10" autocomplete="off" onchange="intendedPeriodCalcuator()" />
+        </td>
+        <td id="total10">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">Machine scenario after use<span class="tooltiptext">Machine After Use</span></td>
+        <td>
+          <select autocomplete="off" class="input-11" name="Machine1" id="Machine1">
+            <option value="Sale in DTA">Sale in DTA</option>
+            <option value="Waste Or Scrap">Waste Or Scrap</option>
+            <option value="Destroy">Destroy</option>
+            <option value="Export">Export</option>
+          </select>
+        </td>
+        <td>
+          <select autocomplete="off" class="input-11" name="Machine2" id="Machine2">
+            <option value="Sale in DTA">Sale in DTA</option>
+            <option value="Waste Or Scrap">Waste Or Scrap</option>
+            <option value="Destroy">Destroy</option>
+            <option value="Export">Export</option>
+          </select>
+        </td>
+        <td>
+          <select autocomplete="off" class="input-11" name="Machine3" id="Machine3">
+            <option value="Sale in DTA">Sale in DTA</option>
+            <option value="Waste Or Scrap">Waste Or Scrap</option>
+            <option value="Destroy">Destroy</option>
+            <option value="Export">Export</option>
+          </select>
+        </td>
+        <td>
+          <select autocomplete="off" class="input-11" name="Machine4" id="Machine4">
+            <option value="Sale in DTA">Sale in DTA</option>
+            <option value="Waste Or Scrap">Waste Or Scrap</option>
+            <option value="Destroy">Destroy</option>
+            <option value="Export">Export</option>
+          </select>
+        </td>
+        <td>
+          <select autocomplete="off" class="input-11" name="Machine5" id="Machine5">
+            <option value="Sale in DTA">Sale in DTA</option>
+            <option value="Waste Or Scrap">Waste Or Scrap</option>
+            <option value="Destroy">Destroy</option>
+            <option value="Export">Export</option>
+          </select>
+        </td>
+        <td>
+          <select autocomplete="off" class="input-11" name="Machine6" id="Machine6">
+            <option value="Sale in DTA">Sale in DTA</option>
+            <option value="Waste Or Scrap">Waste Or Scrap</option>
+            <option value="Destroy">Destroy</option>
+            <option value="Export">Export</option>
+          </select>
+        </td>
+        <td>
+          <select autocomplete="off" class="input-11" name="Machine7" id="Machine7">
+            <option value="Sale in DTA">Sale in DTA</option>
+            <option value="Waste Or Scrap">Waste Or Scrap</option>
+            <option value="Destroy">Destroy</option>
+            <option value="Export">Export</option>
+          </select>
+        </td>
+        <td id="total11"></td>
+      </tr>
+
+    </tbody>
+  </table>
+  <h2 class="printable">Raw Materials</h2>
+  <table class="printable">
+    <thead>
+      <tr>
+        <td class="tooltip">BCD <span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td>2.5%</td>
+        <td>5.0%</td>
+        <td>7.5%</td>
+        <td>10.0%</td>
+        <td>15.0%</td>
+        <td>20.0%</td>
+        <td>25.0%</td>
+        <td>Total</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tooltip">Assessable value <span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-12" onchange="calculateTotal(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-12" onchange="calculateTotal(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-12" onchange="calculateTotal(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-12" onchange="calculateTotal(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-12" onchange="calculateTotal(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-12" onchange="calculateTotal(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-12" onchange="calculateTotal(2)" /></td>
+        <td id="total12">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">BCD amount <span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-13" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-13" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-13" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-13" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-13" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-13" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-13" readonly /></td>
+        <td id="total13">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">SWS<span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-14" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-14" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-14" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-14" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-14" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-14" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-14" /></td>
+        <td id="total14">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">AIDC Rate <span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-15" onchange="aidcCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-15" onchange="aidcCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-15" onchange="aidcCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-15" onchange="aidcCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-15" onchange="aidcCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-15" onchange="aidcCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-15" onchange="aidcCalculator(2)" /></td>
+        <td id="total15">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">AIDC amount <span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-16" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-16" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-16" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-16" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-16" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-16" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-16" readonly /></td>
+        <td id="total16">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">ADD Rate <span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-17" onchange="addCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-17" onchange="addCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-17" onchange="addCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-17" onchange="addCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-17" onchange="addCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-17" onchange="addCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-17" onchange="addCalculator(2)" /></td>
+        <td id="total17">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">ADD amount <span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-18" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-18" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-18" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-18" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-18" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-18" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-18" readonly /></td>
+        <td id="total18">0</td>
+      </tr>
+
+      <tr>
+        <td class="tooltip">IGST Rate <span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-19" onchange="igstCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-19" onchange="igstCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-19" onchange="igstCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-19" onchange="igstCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-19" onchange="igstCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-19" onchange="igstCalculator(2)" /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-19" onchange="igstCalculator(2)" /></td>
+        <td id="total19">0</td>
+      </tr>
+      <tr>
+        <td class="tooltip">IGST amount <span class="tooltiptext">Lorem, ipsum dolor.</span></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-20" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-20" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-20" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-20" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-20" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-20" readonly /></td>
+        <td><input autocomplete="off" type="number" min="0" class="input-20" readonly /></td>
+        <td id="total20">0</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="printable" class="table3">
+    <tr>
+      <td class="table3-title">Imported RM turnaround time from date of import clearance till it is sold in DTA (in
+        days) <span class="tooltiptext">Lorem dolor.</span></td>
+      <td>
+        <input autocomplete="off" type="number" id="input-21" min="0" class="table3" />
+      </td>
+    </tr>
+
+    <tr>
+      <td class="table3-title">Timelag for utilisation of input tax credit of IGST (in days) <span
+          class="tooltiptext">Lorem dolor.</span></td>
+      <td>
+        <input autocomplete="off" type="number" id="input-22" min="0" class="table3" />
+      </td>
+    </tr>
+    <tr>
+      <td class="table3-title">Expected rate of interest <span class="tooltiptext">Lorem dolor.</span></td>
+      <td>
+        <input autocomplete="off" type="number" id="input-23" min="0" class="table3" />
+      </td>
+    </tr>
+    <tr>
+      <td class="table3-title">Projected Annual Exports <span class="tooltiptext">Lorem dolor.</span></td>
+      <td>
+        <input autocomplete="off" type="number" id="input-24" min="0" class="table3" />
+      </td>
+    </tr>
+    <tr>
+      <td class="table3-title">RoDTEP Rate <span class="tooltiptext">Lorem dolor.</span></td>
+      <td>
+        <input autocomplete="off" type="number" id="input-25" min="0" class="table3" />
+      </td>
+    </tr>
+  </table>
+
+  <button class="printable" onclick="calculateReport()" class="btn">Calculate</button>
+  <h2>Optitax's Report </h2>
+  <div class="container" id='container'>
+    <table id="moowrTable">
+      <tr>
+        <th colspan="2">Conclusion:</th>
+      </tr>
+      <tr>
+        <td colspan="2">Most beneficial: MOOWR Scheme: Large amount of import and DTA sale<br>Not eligible: EOU/AA/SEZ:
+          No/marginal exports</td>
+      </tr>
+      <tr>
+        <th>Particulars</th>
+        <th>Amount</th>
+      </tr>
+      <tr>
+        <th class="highlight" colspan="2">For Capital Goods:</th>
+      </tr>
+      <tr>
+        <td>Duty (BCD + SWS) deferred at the time of import</td>
+        <td id="dutyDeferred">#VALUE!</td>
+      </tr>
+      <tr>
+        <td>NPV of the duty (BCD + SWS) payable after intended use</td>
+        <td id="npvDutyPayable" class="red-text">#VALUE!</td>
+      </tr>
+      <tr>
+        <td>Savings in cost of working capital - IGST</td>
+        <td id="savingsIGST">1000</td>
+      </tr>
+      <tr>
+        <th class="highlight" colspan="2">For Inputs*:</th>
+      </tr>
+      <tr>
+        <td>Savings in cost of working capital on deferred duties of Customs (NPV for 10 years)</td>
+        <td id="savingsCustomsDuties">5,222,039</td>
+      </tr>
+      <tr>
+        <td>Savings in cost of working capital on deferred IGST (NPV for 10 years)</td>
+        <td id="savingsDeferredIGST">5,532,988</td>
+      </tr>
+      <tr>
+        <td>RoDTEP benefits on exports, forgone by a MOOWR unit (NPV for 10 years)*</td>
+        <td class="red-text" id="forgoneRoDTEP">-16,044,144</td>
+      </tr>
+      <tr>
+        <th class="highlight" colspan="2">Net Benefit</th>
+      </tr>
+      <tr>
+        <td colspan="2" id="netBenefit">#VALUE!</td>
+      </tr>
+    </table>
+
+    <div class="note-section">
+      <table class="note-table">
+        <tr>
+          <th colspan="2">Note on MOOWR scheme:</th>
+        </tr>
+        <tr>
+          <th>Particulars</th>
+          <th>Comments</th>
+        </tr>
+        <tr>
+          <th class="rh">Advantages - import of CG</th>
+          <td>
+            Improved cash flows due to import of CG without upfront payment of the duties of Customs
+            <hr>
+            Old and second-hand goods allowed for such duty deferment
+            <hr>
+            No interest on permitted and extended periods of warehousing for the inputs and capital goods required for
+            manufacturing operations
+            <hr>
+            One time license of Private Warehouse and permission to manufacture. No renewal required
+            <hr>
+            No foreign exchange earning obligations
+            <hr>
+            Bonded goods can be sent for job working outside the MOOWR unit
+            <hr>
+            Reconditioning, repairing activities in respect of used imported goods can be carried out under MOOWR
+            <hr>
+            Remittance of Customs duty, if the imported raw material is exported or used in manufacture of the exported
+            goods
+          </td>
+        </tr>
+        <tr>
+          <th class="rh">Advantages - RM</th>
+          <td>
+            Deferment of all customs duties on imported RM & CG used in manufacture till the time of DTA clearance of
+            resultant products
+            <hr>
+            When resultant goods are cleared for home consumption, the duties of Customs are paid:
+            <hr>
+            a. on import value of the bonded content
+            <hr>
+            b. at rate duties prevailing on the date of clearance for home consumption
+            <hr>
+            c. without interest
+            <hr>
+            No obligation of minimum investment or import threshold
+            <hr>
+            Monetary & logistical ease within its ambit with improved guidelines and assistance which are superior than
+            the existing schemes such as the AA, EPCG, EOU, etc.
+            <hr>
+            On export, resultant goods being ‘made in India’, can claim import benefit under PTA/FTA – subject to
+            conditions in the agreement
+          </td>
+        </tr>
+        <tr>
+          <th class="rh">Disadvantages</th>
+          <td>
+            No depreciation in value of capital goods on de-bonding
+            <hr>
+            Goods imported by MOOWR unit cannot be delivered elsewhere as the shipment must be delivered in the MOOWR
+            unit first
+            <hr>
+            Goods imported by another person cannot be deposited in a MOOWR unit
+            <hr>
+            MOOWR unit is not eligible for all industry rate of DBK (AIR) and RoDTEP
+            <hr>
+            On DTA clearances of resultant goods One to one co-relation needed for discharging duty on bonded content in
+            DTA sales
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <button class="printable" id='print' onclick="printReport('container')">Print Report</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
